@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spring Boot Example</title>
+</head>
+<body>
+<div class="container">
+    <div class="row" >
+        <div class="col-12" >
+            <form action="#" th:action="@{/example3/store}" th:object="${person}" method="post">
+                <p>Name: <input type="text" th:field="*{name}" value="${person.name}"/></p>
+                <p>Name: <input type="text" th:field="*{age}" value="${person.age}"/></p>
+                <p><input type="submit" value="submit"/></p>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
